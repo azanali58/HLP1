@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class cal
+{
+    private:
+    int num1;
+    int num2;
+    public:
+    /*cal()
+    {
+        cout <<"Enter the first number ";
+        cin >> num1;
+        cout <<"Enter the second number ";
+        cin >> num2;
+    }
+    */
+    void read(){ // VOID IS AN  alternative to constractor
+        cout <<"Enter the first number ";
+        cin >> num1;
+        cout <<"Enter the second number ";
+        cin >> num2;
+    }
+    int sum(){
+        return num1 + num2;
+    }
+    int diff(){
+        return num1 - num2;
+    }
+    int max(){
+        if (num1>num2){
+            return num1;
+        }
+        else
+        {
+            return num2;
+        }  
+    } 
+    int getnum1()
+    {
+        return num1;
+    }
+    int getnum2()
+    {
+        return num2;
+    }
+};
+int main()
+{
+   string opr;
+   cal prob1;
+   prob1.read();
+   cout << "Enter the operator \nSum for addition\nDiff for subtraction\nMax to get MAximum number\n";
+   cin >> opr;
+   if (opr == "Sum"){
+       cout << "The sum of "<<prob1.getnum1()<<" and "<<prob1.getnum2()<<" is "<<prob1.sum()<<endl;
+   }
+   else if(opr == "Diff"){
+        cout << "The difference of "<<prob1.getnum1()<<" and "<<prob1.getnum2()<<" is "<<prob1.diff()<<endl;
+   }
+   else if(opr == "Max"){
+       cout << "The MAximum of "<<prob1.getnum1()<<" and "<<prob1.getnum2()<<" is "<<prob1.max()<<endl;
+   }
+   
+   
+   return 0;
+}
